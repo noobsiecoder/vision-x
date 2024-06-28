@@ -20,7 +20,52 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-pub mod errors;
-pub mod extensions;
-pub mod image;
-mod utils;
+/// Enum to indicate the errorcode during runtime
+///
+/// # Examples
+/// ```
+/// # use vision_x::errors;
+/// use vision_x::{errors::ErrorCode, image};
+///
+/// # fn main() -> Result<(), errors::Error> {
+/// let path = "images/png/xyz.png";
+/// let image_data = image::load(&path);
+///
+/// assert_eq!(image_data.unwrap_err().code, ErrorCode::PathNotFound);
+/// # Ok(()) }
+/// ```
+#[derive(Debug, Clone, PartialEq)]
+pub enum ErrorCode {
+    PathNotFound,
+    FileNotFound,
+    InvalidExtension,
+    InvalidColorExtension,
+    IOError,
+    InternalError,
+}
+
+/// Build error value if any error occurs during runtime
+///
+/// # Examples
+/// ```
+/// use vision_x::{errors::Error as ImageError, image};
+///
+/// fn get_image() -> Result<(), ImageError> {
+///     let path = "images/png/xyz.png";
+///     let image_data = image::load(&path)?;
+///
+///     Ok(())
+/// }
+/// ```
+#[derive(Debug, Clone)]
+pub struct Error {
+    pub message: String,
+    pub code: ErrorCode,
+}
+
+impl Error {
+    /// Returns the error object
+    pub fn custom_error<T>(self) -> Result<T, Self> {
+        Err(self)
+    }
+}
