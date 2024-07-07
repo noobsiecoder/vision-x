@@ -2,7 +2,7 @@
 
 **🚧 Under development**
 
-VisionX is a robust and comprehensive image processing library written in Rust. It aims to provide a wide range of functionalities similar to OpenCV, allowing developers to perform various image processing tasks efficiently and effectively with built-in batteries (image processing tools for different scenarios/use-cases)
+VisionX is a robust and comprehensive image processing library written in Rust. It aims to provide a wide range of functionalities similar to OpenCV, allowing developers to perform various image processing tasks efficiently and effectively with **built-in batteries (image processing tools for different scenarios/use-cases)**
 
 ## Deliverables
 
