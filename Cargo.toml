@@ -1,7 +1,21 @@
 [package]
 name = "vision-x"
 version = "0.1.0"
+authors = ["Abhishek Sriram <abhishek._.sriram@outlook.com>"]
 edition = "2021"
+rust-version = "1.79.0"
+description = "Image preprocessing library. Provides basic inbuilt image processing functions"
+
+documentation = "/#"
+readme = "README.md"
+homepage = "/#"
+repository = "https://github.com/noobsiecoder/vision-x"
+license = "MIT"
+
+keywords = ["image", "image-preprocessing", "computer-vision"]
+categories = ["computer-vision"]
+exclude = ["/benchmark", "/docs", "/images", "/www"]
 
 [dependencies]
-png = "0.17.13"
+ndarray = "0.15.6"
+image = "0.25.1"
