@@ -20,7 +20,34 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
+//! VisionX is an Image processing library inspired from the OpenCV library
+//! The project's sole focus is to develop tools and softwares specific to image processing with rust's memory safety
+//! VisionX aims to provide basic image processing operations and include batteries (built-in image processing for different scenarios) to ease development and reduce time
+
+//! To use the library:
+
+//! ```bash
+//! cargo install visionx
+//!
+//! // or paste inside your projects' Cargo.toml
+//! // inside your Cargo.toml
+//! // ..
+//! [dependencies]
+//! visionx = "*"
+//! ```
+
+//! Currently uses image and ndarray crate to handle image manipulation and pixel storage respectively
+
+//! The project is still under development and any contribution at this moment is really appreciated
+
+/// Contains all the core implementation for image storage
+pub mod core;
+
+/// Responsible for read, and write operation for an image
+pub mod io;
+
+/// Contains Result, and ErrorKind type. Responsible to throw error during runtime
 pub mod errors;
-pub mod extensions;
-pub mod image;
-mod utils;
+
+/// Contains implementation of image processing tools/operations
+mod imgproc;
