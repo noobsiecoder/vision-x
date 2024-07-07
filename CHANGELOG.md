@@ -4,6 +4,7 @@
 - imgproc/ contains: `frame.rs`, `color.rs` (implemented image size and image color manipulation)
 - Ran unit tests for all operations with known edge cases
 - Example code created to illustrate read, write and color manipulation operation in `examples/io.rs`
+- Modified `README.md`
 
 # v0.1.2-alpha (2024-07-02)
 
