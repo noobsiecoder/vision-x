@@ -14,7 +14,4 @@ Cargo.lock
 *.pdb
 
 # Images generated during unit tests
-**/test/*.jpg
-**/test/*.jpeg
 **/test/*.png
-**/test/*.bmp

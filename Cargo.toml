@@ -1,10 +1,10 @@
 [package]
 name = "vision-x"
-version = "0.1.0"
+version = "1.0.0"
 authors = ["Abhishek Sriram <abhishek._.sriram@outlook.com>"]
 edition = "2021"
 rust-version = "1.79.0"
-description = "Image preprocessing library. Provides basic inbuilt image processing functions"
+description = "A lite version of Image processing library for enthusiast and researchers"
 
 documentation = "/#"
 readme = "README.md"
@@ -12,10 +12,9 @@ homepage = "/#"
 repository = "https://github.com/noobsiecoder/vision-x"
 license = "MIT"
 
-keywords = ["image", "image-preprocessing", "computer-vision"]
+keywords = ["image", "image-processing", "computer-vision"]
 categories = ["computer-vision"]
 exclude = ["/benchmark", "/docs", "/images", "/www"]
 
 [dependencies]
-ndarray = "0.15.6"
-image = "0.25.1"
+# no dependencies added yet
